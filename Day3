@@ -1,1 +1,45 @@
+level 1
+from cairo import 
+def sum_multiples(n: u32, m: u32) -> u32:
+    total_sum = 0
+    for num in range(1, n + 1):
+        if num % m == 0:
+            total_sum += num
+    return total_sum
 
+
+n_values = [10, 20, 30]
+m_values = [2, 3, 5]
+
+for n in n_values:
+    for m in m_values:
+        result = sum_multiples(n, m)
+        print(f"The sum of multiples of {m} up to {n} is: {result}")
+
+level 2
+def print_odd_multiples(n: int, m: int) -> None:
+    for num in range(1, n + 1):
+        if num % m == 0 and num % 2 != 0:
+            print(num)
+
+
+n_values = [20, 30, 40]
+m_values = [3, 5, 7]
+
+for n in n_values:
+    for m in m_values:
+        print(f"Odd multiples of {m} less than or equal to {n}:")
+        print_odd_multiples(n, m)
+        print()
+level 3
+def calculate_power(base: int, exponent: int) -> int:
+    return base ** exponent
+
+
+base_values = [2, 3, 4]
+exponent_values = [2, 3, 4]
+
+for base in base_values:
+    for exponent in exponent_values:
+        result = calculate_power(base, exponent)
+        print(f"{base} raised to the power of {exponent} is: {result}")
